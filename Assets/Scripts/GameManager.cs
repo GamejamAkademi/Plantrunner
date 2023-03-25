@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public float plantValue = 5000;
+    public float plantValue = 500;
 
     private static GameManager _instance;
 

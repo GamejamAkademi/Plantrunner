@@ -9,10 +9,41 @@ public class PlayerController : MonoBehaviour
     float newDeltax;
     public float xSpeed;
     public float limitx;
-    // Update is called once per frame
+
+
+
+    [SerializeField] GameObject[] flowers;
+ 
+    [SerializeField] int currentLevelIndex=0;
+    [SerializeField] int lowLevel=1000;
+    [SerializeField] int midLevel=2000;
+    [SerializeField] int highLevel=3000;
+
     void Update()
     {
         Swipecheck();
+        ChangeMesh();
+    }
+
+    void ChangeMesh(){
+
+        if(GameManager.Instance.plantValue<lowLevel){
+            flowers[currentLevelIndex].gameObject.SetActive(false);
+            currentLevelIndex=0;
+            flowers[currentLevelIndex].gameObject.SetActive(true);
+        }else if(GameManager.Instance.plantValue>=lowLevel && GameManager.Instance.plantValue<midLevel){
+            flowers[currentLevelIndex].gameObject.SetActive(false);
+            currentLevelIndex=1;
+            flowers[currentLevelIndex].gameObject.SetActive(true);
+        }else if(GameManager.Instance.plantValue>=midLevel && GameManager.Instance.plantValue<highLevel){
+            flowers[currentLevelIndex].gameObject.SetActive(false);
+            currentLevelIndex=2;
+            flowers[currentLevelIndex].gameObject.SetActive(true);
+        }else if(GameManager.Instance.plantValue>highLevel){
+            flowers[currentLevelIndex].gameObject.SetActive(false);
+            currentLevelIndex=3;
+            flowers[currentLevelIndex].gameObject.SetActive(true);
+        }
     }
 
     private void Swipecheck()
@@ -21,13 +52,13 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("finger is moved");
             Debug.Log(Input.GetTouch(0).deltaPosition.x / Screen.width);
-            //parmaðýnýn ekranda nerde olduðunun hassas deðeri
+            //parmaginin ekranda nerde oldugunun hassas degeri
             touchxDelta = Input.GetTouch(0).deltaPosition.x / Screen.width;
         }
         else if (Input.GetMouseButton(0))
         {
             touchxDelta = Input.GetAxis("Mouse X");
-            //mouse ile de kontrol edebilmek için ekledik
+            //mouse ile de kontrol edebilmek icin ekledik
         }
         else
         {
