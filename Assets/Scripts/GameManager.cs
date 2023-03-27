@@ -40,8 +40,4 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void Update() {
-        Debug.Log(plantValue);
-    }
 }

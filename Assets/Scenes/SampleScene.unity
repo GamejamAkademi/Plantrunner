@@ -712,7 +712,7 @@ Transform:
   - {fileID: 1719826365}
   - {fileID: 900130128}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1572,7 +1572,7 @@ Transform:
   - {fileID: 2061575663}
   - {fileID: 1250651842}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1181624811
 GameObject:
@@ -1913,7 +1913,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1255197619 stripped
 GameObject:
@@ -1965,7 +1965,7 @@ Transform:
   - {fileID: 1761333697}
   - {fileID: 1830180895}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1496069782 stripped
 GameObject:
@@ -3319,7 +3319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031494256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.473, z: -10}
+  m_LocalPosition: {x: 0, y: 0.024, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3331,7 +3331,7 @@ Transform:
   - {fileID: 874513710729397664}
   - {fileID: 1197695330}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2031494258
 MonoBehaviour:
@@ -3371,7 +3371,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &2031494260
 CapsuleCollider:
@@ -3383,10 +3383,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1.6294932
+  m_Radius: 0.37697288
+  m_Height: 1.4738249
   m_Direction: 1
-  m_Center: {x: 0, y: 1.0844772, z: 0}
+  m_Center: {x: 0.007236868, y: 0.74783427, z: 0}
 --- !u!114 &2031494261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3399,7 +3399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9780f273a9195334ca9c46710883239c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 3
+  force: 1000
 --- !u!1001 &2033355320
 PrefabInstance:
   m_ObjectHideFlags: 0

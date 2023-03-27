@@ -14,7 +14,7 @@ public class Obstacles : MonoBehaviour
     {
         if (other.tag == "Obstacle")
         {
-            Debug.Log("engele çarptý");
+            Debug.Log("engele ï¿½arptï¿½");
             _rigidbody.AddForce(transform.right * force);
         }
     }
