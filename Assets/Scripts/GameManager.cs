@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
 
     private static GameManager _instance;
 
+
+    public bool isPlayable=false;
+
     public static GameManager Instance
     {
         get

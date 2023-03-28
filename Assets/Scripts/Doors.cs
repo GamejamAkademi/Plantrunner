@@ -7,7 +7,7 @@ public class Doors : MonoBehaviour
 {
     
     [SerializeField] TextMeshPro doorText;
-    [SerializeField] int value;
+    [SerializeField] float value;
     [SerializeField] string doorOp;
     bool doorOpen = false;
 
@@ -37,6 +37,7 @@ public class Doors : MonoBehaviour
                 GameManager.Instance.plantValue = GameManager.Instance.plantValue * value;
             }
         }
+        Debug.Log(GameManager.Instance.plantValue);
         doorOpen = true;
     }
 }

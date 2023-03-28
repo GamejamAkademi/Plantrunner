@@ -21,8 +21,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Swipecheck();
-        ChangeMesh();
+        if(GameManager.Instance.isPlayable == true){
+            Swipecheck();
+            ChangeMesh();
+        }
+        
     }
 
     void ChangeMesh(){
