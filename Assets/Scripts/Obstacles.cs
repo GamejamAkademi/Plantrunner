@@ -12,9 +12,12 @@ public class Obstacles : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Obstacle")
+        if (other.tag == "ObstacleRight")
         {
-            Debug.Log("engele �arpt�");
+            _rigidbody.AddForce(transform.right * force * -1);
+        }
+        if (other.tag == "ObstacleLeft")
+        {
             _rigidbody.AddForce(transform.right * force);
         }
     }
