@@ -10,14 +10,12 @@ public class PlayerController : MonoBehaviour
     public float xSpeed;
     public float limitx;
 
-
-
     [SerializeField] GameObject[] flowers;
- 
-    [SerializeField] int currentLevelIndex=0;
-    [SerializeField] int lowLevel=1000;
-    [SerializeField] int midLevel=2000;
-    [SerializeField] int highLevel=3000;
+    [SerializeField] GameObject[] roots;
+
+    int currentIndex=0;
+    int currentRootIndex=0;
+    int rootIndex=0;
 
     void Update()
     {
@@ -25,28 +23,29 @@ public class PlayerController : MonoBehaviour
             Swipecheck();
             ChangeMesh();
         }
-        
     }
 
     void ChangeMesh(){
-
-        if(GameManager.Instance.plantValue<lowLevel){
-            flowers[currentLevelIndex].gameObject.SetActive(false);
-            currentLevelIndex=0;
-            flowers[currentLevelIndex].gameObject.SetActive(true);
-        }else if(GameManager.Instance.plantValue>=lowLevel && GameManager.Instance.plantValue<midLevel){
-            flowers[currentLevelIndex].gameObject.SetActive(false);
-            currentLevelIndex=1;
-            flowers[currentLevelIndex].gameObject.SetActive(true);
-        }else if(GameManager.Instance.plantValue>=midLevel && GameManager.Instance.plantValue<highLevel){
-            flowers[currentLevelIndex].gameObject.SetActive(false);
-            currentLevelIndex=2;
-            flowers[currentLevelIndex].gameObject.SetActive(true);
-        }else if(GameManager.Instance.plantValue>highLevel){
-            flowers[currentLevelIndex].gameObject.SetActive(false);
-            currentLevelIndex=3;
-            flowers[currentLevelIndex].gameObject.SetActive(true);
+        int index = (int) GameManager.Instance.plantValue / 1000 ;
+        Debug.Log(rootIndex);
+        Debug.Log(currentIndex);
+        if(currentIndex < 4f ){
+            rootIndex = 0;
+        }else if(currentIndex >= 4f & currentIndex <8f){
+            rootIndex = 1;
+        }else if(currentIndex >= 8f & currentIndex <12f){
+            rootIndex = 2;
+        }else if(currentIndex >12f){
+            rootIndex = 3;
         }
+        //roots
+        roots[currentRootIndex].gameObject.SetActive(false);
+        roots[rootIndex].gameObject.SetActive(true);
+        //flowers
+        flowers[currentIndex].gameObject.SetActive(false);
+        flowers[index].gameObject.SetActive(true);
+        currentRootIndex = rootIndex;
+        currentIndex = index;
     }
 
     private void Swipecheck()
