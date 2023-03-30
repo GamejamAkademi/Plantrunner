@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1779,6 +1779,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: jump button
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bd75b008dfc9a74d9b2bdbb37ea7fa1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Jump
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bd75b008dfc9a74d9b2bdbb37ea7fa1, type: 3}
 --- !u!4 &821363529 stripped
@@ -2638,6 +2643,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1024925907}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1034019380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6bd75b008dfc9a74d9b2bdbb37ea7fa1,
+    type: 3}
+  m_PrefabInstance: {fileID: 821363528}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1034019381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034019380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.019999994, z: 0.39381838}
+  m_Center: {x: 0, y: -1.3172508e-16, z: 0.18690975}
 --- !u!1 &1089087574 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 173870977442162429, guid: ca22d8c4260f0114dac94f6b63cfea33,
@@ -13890,6 +13914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 1000
+  forceup: 400
 --- !u!1 &2051000273
 GameObject:
   m_ObjectHideFlags: 0

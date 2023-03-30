@@ -6,6 +6,7 @@ public class Obstacles : MonoBehaviour
 {
     Rigidbody _rigidbody;
     public float force ;
+    public float forceup ;
     private void Start()
     {
         _rigidbody= GetComponent<Rigidbody>();
@@ -19,6 +20,10 @@ public class Obstacles : MonoBehaviour
         if (other.tag == "ObstacleLeft")
         {
             _rigidbody.AddForce(transform.right * force);
+        }
+        if(other.tag == "Jump")
+        {
+            _rigidbody.AddForce(transform.up * forceup);
         }
     }
 }
